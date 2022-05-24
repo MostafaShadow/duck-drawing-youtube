@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --maincolor: #fed72b;
+  --secondcolor: #fe9711;
+  --thirdcolor: #fef53a;
+}
+
+.app {
+  background-color: #45277b;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.duck {
+  height: 500px;
+  width: 500px;
+  position: relative;
+}
+
+.duck .body {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  top: 100px;
+  left: 100px;
+  background: var(--maincolor);
+}
+
+.duck .body:before {
+  content: "";
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  box-shadow: 80px 45px 0 var(--secondcolor);
+  border-radius: 50%;
+  transform: rotate(30deg);
+  left: 10px;
+  top: -4px;
+}
+
+.duck .body:after {
+  content: "";
+  position: absolute;
+  background: var(--maincolor);
+  height: 130px;
+  width: 220px;
+  top: 140px;
+  border-radius: 70px;
+}
+
+.duck .feather {
+  position: absolute;
+  width: 170px;
+  height: 110px;
+  background: var(--thirdcolor);
+  top: 220px;
+  left: 190px;
+  border-radius: 31% 69% / 50% 100% 0 50%;
+}
+
+.duck .feather:before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 25px;
+  top: -120px;
+  left: -15px;
+  background: var(--maincolor);
+  border-radius: 0px 5px 20px 0px;
+}
+
+.duck .eye {
+  position: absolute;
+  background: #111;
+  width: 30px;
+  height: 30px;
+  top: 160px;
+  left: 180px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 12px #fff;
+}
+
+.eye:before {
+  position: absolute;
+  content: "";
+  background: var(--thirdcolor);
+  height: 10px;
+  width: 35px;
+  border-radius: 5px;
+  bottom: 50px;
+  left: -1px;
+}
+.mouse {
+  height: 20px;
+  width: 80px;
+  background: var(--secondcolor);
+  position: absolute;
+  top: 190px;
+  left: 70px;
+  border-radius: 30% 10% 16% 0 / 100% 0 30% 10%;
+}
+.mouse:before {
+  content: "";
+  position: absolute;
+  background: var(--secondcolor);
+  height: 40px;
+  width: 90px;
+  border-radius: 0 40% / 0 100%;
+  bottom: 14px;
+  right: 0;
+}
